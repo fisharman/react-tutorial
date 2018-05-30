@@ -1,5 +1,5 @@
 import React from 'react';
-import Square from './game';
+import Square from './square';
 import { shallow } from 'enzyme';
 
 test('renders without crashing', () =>{

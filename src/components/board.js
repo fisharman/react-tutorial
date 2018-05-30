@@ -5,14 +5,14 @@ class Board extends React.Component {
     renderSquare(i) {
         var winnerSquares = new Set();
         for (let square in this.props.winnerLine){
-        winnerSquares.add(this.props.winnerLine[square]);
+            winnerSquares.add(this.props.winnerLine[square]);
         }
         return (
-        <Square
-            value = {this.props.squares[i]}
-            className = {winnerSquares.has(i) ? "square square--win" : "square"}
-            onClick = {() => this.props.onClick(i)}
-        />
+            <Square
+                value = {this.props.squares[i]}
+                className = {winnerSquares.has(i) ? "square square--win" : "square"}
+                onClick = {() => this.props.onClick(i)}
+            />
         );
     }
 
@@ -28,9 +28,9 @@ class Board extends React.Component {
         }
 
         return (
-        <div>
-            {board}
-        </div>
+            <div>
+                {board}
+            </div>
         );
     }
 }
